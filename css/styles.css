@@ -1,0 +1,158 @@
+/**--CUSTOM PROPERTIES--**/
+:root {
+    /**--COLORS--**/
+    --prmary: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+    /**--FONTS--**/
+    --mainFont:'Overpass', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+ 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--veryDarkBlue);
+    height: 100vh;
+    font-family: var(--mainFont);
+}
+
+h1, h2, h3 {
+    color: var(--white);
+}
+
+
+.main-wrapper {
+    max-width: min(90%, 1100px);
+    margin: 0 auto;
+    display: grid;
+    height: 100%;
+    place-items: center;
+    /* justify-content: center; */
+}
+/**--UTILITY CLASS--**/
+.bg-primary {
+    background-color: var(--prmary);
+}
+.text-orange {
+    color: var(--prmary);
+}
+
+
+
+.hidden {
+    display: none;
+}
+.btn {
+    display: block;
+    margin-top: 25px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2px;
+    width: 100%;
+    border-radius: 35px;
+    text-transform: uppercase;
+    border: none;
+    color: var(--white);
+    padding: 15px 0;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--prmary);
+}
+
+
+
+.icon {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+}
+
+.main-wrapper {
+    max-width: 415px;
+}
+.container {
+    border-radius: 25px;
+    padding: 30px;
+    background-image: linear-gradient(to bottom, var(--darkBlue) 0%, var(--veryDarkBlue) 150%);
+}
+
+@media ( min-width:768px ){
+    .icon {
+        height: 55px;
+        width: 55px;
+    }
+    
+}
+
+/**--rating-form--**/
+
+.rating-form .icon-start {
+    background-color: hsla(217, 12%, 63%, .1);
+}
+
+.rating-form p {
+    color: var(--lightGrey);
+    line-height: 1.5;
+}
+
+.container-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-buttons input {
+    color: var(--mediumGrey);
+    cursor: pointer;
+    font-weight: 700;
+    background-color: hsla(217, 12%, 63%, .1);
+    border: none;
+    
+}
+.container-buttons input:hover {
+    background-color: var(--prmary);
+    color: var(--white);
+}
+
+input.selected {
+    
+
+    transition: all .2s ease-in-out;
+    background-color: var(--lightGrey)!important;
+    color: var(--white);
+}
+
+/**--thank-section--**/
+.thank-section {
+    text-align: center;
+}
+.thank-section .you-selected {
+    background-color: hsla(217, 12%, 63%, .1);
+    width: 60%;
+    border-radius: 15px;
+    color: var(--prmary);
+    padding: 9px;
+    margin: 15px auto;
+}
+.thank-text {
+    color: var(--lightGrey);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
